@@ -1,0 +1,21 @@
+{
+	"name": "homebridge-led-strip",
+	"version": "1.0.0",
+	"description": "Homebridge Led-Plugin with Led Backup Storage at /var/homebridge/ => If homebridge restarts the led are still on",
+	"keywords": [
+	  "homebridge-plugin",
+          "homebridge",
+	  "led"
+	],
+	"engines": {
+	   "node": ">=0.8.0",
+	   "homebridge": ">=0.2.0"
+	},
+	"author": {
+	   "name": "wastene",
+	   "email": "adrian@a-berisha.de"
+	},
+	"dependencies": {
+	  "rpio": "0.9.0"
+	}
+}
