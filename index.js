@@ -18,9 +18,9 @@ function LedAccessory(log, config) {
   this.map = config["mapping"] || "gpio";
   
   
-  if(backup != "none"){
+  if(this.backup != "none"){
 	this.backupBool = 1;
-	this.backupPath = this.backup + this.pathPinSuf + this.pin;
+	this.backupPath = this.backup + pathPinSuf + this.pin;
   }else{
 	this.backupBool = 0;  
   }
@@ -40,7 +40,7 @@ function LedAccessory(log, config) {
     .on('get', this.getOn.bind(this))
     .on('set', this.setOn.bind(this));
 	
-  if(backupBool){
+  if(this.backupBool){
 	  try {
 		this.FileOn = fs.readFileSync(this.backupPath);
 		this.log("ReadFile : " + this.FileOn + " Pin: " + this.pin);
@@ -67,7 +67,7 @@ LedAccessory.prototype.getOn = function(callback){
 LedAccessory.prototype.setOn = function(on, callback) {
   this.log("Setting power to "+ on);
   rpio.write(this.pin, on);
-  if(backupBool){
+  if(this.backupBool){
     fs.writeFile(this.backupPath, on,{flag: "w"}, function(err){
 	  if(err){
 	     console.log(err);
