@@ -19,11 +19,11 @@ config.json sample:
 ```json
 "accessories": [
    {
-       "accessory": "ledStrip",
-       "name": "Blue",
-       "pin": 18,
-	   "backup": "/var/homebridge/",
-	   "mapping": "gpio"
+       	"accessory": "ledStrip",
+       	"name": "Blue",
+       	"pin": 18,
+       	"backup": "/var/homebridge/",
+       	"mapping": "gpio"
    }
 ]
 ```
