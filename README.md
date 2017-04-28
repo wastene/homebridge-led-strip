@@ -1,7 +1,7 @@
 homebridge-ledstrip
 ===================
 
-Switch Led's with Homebridge at GPIO-Pins. If Homebridge restarts Led's are still on, because it's stored on /var/homebridge/ (e.g. at "/var/homebridge/.pin18").
+Switch Led's with Homebridge at GPIO-Pins. Can change Brightness as well, but homebridge need to run as root.
 
 https://www.npmjs.com/package/homebridge-led-strip
 
@@ -22,20 +22,23 @@ config.json sample:
        	"accessory": "ledStrip",
        	"name": "Blue",
        	"pin": 18,
-       	"backup": "/var/homebridge/",
-       	"mapping": "gpio"
+       	"brightness": 1
    }
 ]
 ```
 You need declare a pin to use this plugin.
-For backup you can specify a location, where to save the backup's of the pins. If you don't need any backups, type in "none".
-The Led-State's are saved under your backup-path under ".pin" and then your pin number.
-For mapping there are 2 alternatives. The first, the default one is "gpio" and the other is "physical".
+
+With brightness you specify if you want to use the brightness function on your leds.
+When you set brightness to 1 or true, homebridge must run as root, if otherwise it must not run as root.
+
+If you use the brightness function you must follow the installation steps for "pigpio"
+https://www.npmjs.com/package/pigpio  
+https://github.com/fivdi/pigpio  
+
 
 Default Values for config.json:
 name: 		"Led-Strip"
-backup: 	"/var/homebridge/"
-mapping: 	"gpio" 
+brightness:	false		
 
 
 ## Other Information
@@ -49,3 +52,9 @@ This Plugin use the "rpio" - Module from "jperkin":
 
 https://www.npmjs.com/package/rpio  
 https://github.com/jperkin/node-rpio  
+
+
+This Plugin use the "pigpio" - Module from "fivdi":
+
+https://www.npmjs.com/package/pigpio
+https://github.com/fivdi/pigpio
