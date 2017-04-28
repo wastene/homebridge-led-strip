@@ -56,5 +56,5 @@ https://github.com/jperkin/node-rpio
 
 This Plugin use the "pigpio" - Module from "fivdi":
 
-https://www.npmjs.com/package/pigpio
+https://www.npmjs.com/package/pigpio  
 https://github.com/fivdi/pigpio
