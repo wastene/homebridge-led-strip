@@ -8,7 +8,7 @@ https://www.npmjs.com/package/homebridge-led-strip
 ## Install
 
 ```console
- npm install homebridge-ledstrip
+ npm install homebridge-led-strip
 ```
 
 
