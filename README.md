@@ -31,7 +31,7 @@ You need declare a pin to use this plugin.
 With brightness you specify if you want to use the brightness function on your leds.
 When you set brightness to 1 or true, homebridge must run as root, if otherwise it must not run as root.
 
-If you use the brightness function you must follow the installation steps for "pigpio"
+If you use the brightness function you must follow the installation steps for "pigpio":  
 https://www.npmjs.com/package/pigpio  
 https://github.com/fivdi/pigpio  
 
