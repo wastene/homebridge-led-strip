@@ -1,6 +1,6 @@
 {
 	"name": "homebridge-led-strip",
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"description": "Homebridge Led-Plugin to turn leds on and off and change their brightness",
 	"keywords": [
 	  	"homebridge-plugin",
@@ -17,6 +17,6 @@
 	},
 	"dependencies": {
 	  	"rpio": "0.9.0",
-		"pigpio": "0.5.0"
+		"pigpio": "0.5.1"
 	}
 }
